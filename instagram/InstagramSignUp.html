@@ -1,0 +1,106 @@
+<!-- <?php
+include(".\db_connect.php");
+
+$showError=false;
+$showError2=false;
+$name = $phone = $dob = $email = $username = $password = '';
+$errors = array('name' => '', 'phone' => '','dob'=>'','email' => '','username' => '','password' =>'');
+
+if (isset($_POST['submit'])) {
+        // Ensure there's a way to validate fields if needed
+        $name = mysqli_real_escape_string($conn , $_POST['name']);
+        $phone = mysqli_real_escape_string($conn , $_POST['phone']);
+        $dob = mysqli_real_escape_string($conn , $_POST['dob']);
+        $email = mysqli_real_escape_string($conn , $_POST['email']);
+        $username = mysqli_real_escape_string($conn , $_POST['username']);
+        $password = mysqli_real_escape_string($conn, $_POST['password']);
+        $cpassword = mysqli_real_escape_string($conn, $_POST['cpassword']);
+         
+
+        $existsSql= "SELECT * FROM `usersdata` WHERE username='$username'";      
+        $result=mysqli_query($conn,$existsSql);
+        $numExistsrows = mysqli_num_rows($result);
+        if ($numExistsrows > 0) {
+                $showError=true;
+        }
+
+        else {
+                if (($password == $cpassword)) {
+                        $sql = "INSERT INTO `usersdata` (`name`, `phone`, `dob`, `email`, `username`, `password`)
+                        VALUES('$name', '$phone', '$dob', '$email', '$username', '$password')";
+                        if(mysqli_query($conn, $sql)){
+                        header('Location: InstagramLogIn.php');
+                        exit(); 
+                        }      
+                        else {
+                             echo 'Query Error: ' . mysqli_error($conn);
+                        }
+    
+               }else{
+                $showError2=true;
+               }        
+}
+
+}
+    
+
+?>  -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <link rel="stylesheet" href="">
+        <link rel="stylesheet" href="instagram.css">
+</head>
+<body>
+
+        <form action="InstagramSignUp.php" method="post">
+                <div class="container3">
+                        <div class="insta_logo">
+                                <img src="Instagram-name-logo-transparent-PNG.png" alt="">
+                        </div>
+                        <div class="Inputfiled">
+                                <input type="text" class="name" name="name" id="name" placeholder="Enter your name" required>
+
+                                <input type="text" class="phone" name="phone" id="phone" placeholder="Phone number " required>
+
+                                <input type="date" class="dob" name="dob" id="dob" required>
+
+                                <input type="email" class="email" name="email" id="email" placeholder="Enter your email" required>
+                                <input type="text" class="username" name="username" id="username" placeholder="Username" required>
+                                <!-- <?php
+                                if ($showError) {
+                                        echo'<p>Username Already Exists</p>';
+                                }
+                                ?> -->
+                                <input type="password" name="password" id="password" class="password" placeholder="Password" required>
+                                <input type="password" name="cpassword" id="cpassword" class="cpassword" placeholder="Conifrm Password" required>
+                                <!-- <?php
+                                if ($showError2) {
+                                        echo'<p>Password dont match</p>';
+                                }
+                                ?> -->
+                        </div>
+
+                
+                        <div class="logInBtn">
+                                <button type="submit" class="submit" name="submit" id="submit">Sign In</button>
+                        </div> 
+                
+
+
+                        <div class="log-page">
+                                <a href="InstagramLogin.php">Already SignIn</a>
+                        </div>
+
+
+        
+                </div>
+
+        </form>  
+</body>
+</html>

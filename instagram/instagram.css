@@ -1,0 +1,213 @@
+
+.container{
+        height:430px;
+        width: 28%;
+        border: 2px solid black;
+        border-radius: 4px;
+        margin: auto;
+        margin-top: 30px;
+        box-shadow: 0 20px 35px rgba(0, 0, 1, 0.9);
+}
+
+.insta_logo{
+        margin-left: 25%;
+}
+
+.insta_logo img{
+        width: 170px;
+        object-fit: contain;
+}
+.Inputfiled{
+  margin-left: 55px;
+  position: relative;
+  bottom: 20px;      
+}
+
+.Inputfiled input{
+        border-radius: 3px;
+        padding: 8px;
+        margin: 5px;
+        display: block;
+        width: 70%;
+        background-color: rgb(236, 236, 236);
+}
+
+.Inputfiled p{
+        padding: 0;
+        margin: 0;
+        font-size: 10px;
+        margin-left: 5px;
+        font-weight: bold;
+        color: red;
+       
+}
+
+.logInBtn{
+        margin-left: 60px;
+}
+
+.logInBtn button{
+        color: white;
+        font-weight: bold;
+        border: none;
+        cursor: pointer;
+        background-color: #5aa7ff;
+        width: 250px;
+        height: 30px;
+        border-radius: 5px;
+}
+
+.spn{
+        margin-left: 120px;
+        margin-top: 20px;
+}
+.spn span{
+       font-weight: bold;
+}
+
+.fb_log{
+        margin-left: 110px;
+        margin-top: 20px;
+}
+
+.fb_log a i{
+        color: rgb(43, 43, 141);
+        padding-right: 5px;
+}
+.fb_log a{
+        text-decoration: none;
+        font-weight: bold;
+        color: rgb(43, 43, 141);    
+}
+.forget_ps{
+        margin-left: 135px;
+        margin-top: 10px;
+}
+
+.forget_ps a{
+        text-decoration: none;
+        color: rgba(57, 67, 67, 0.936);
+        font-size: 16px;
+}
+
+.container2{
+        height:100px;
+        width: 28%;
+        border: 2px solid black;
+        border-radius: 4px;
+        margin: auto;
+        margin-top: 30px;
+        box-shadow: 0 20px 35px rgba(0, 0, 1, 0.9);
+}
+
+.sign_up{
+        font-weight: bold;
+        margin-left: 80px;
+        margin-top: 40px;
+}
+
+.sign_up a{
+        text-decoration: none;
+        color: #5aa7ff;
+}
+
+.container3{
+        height:550px;
+        width: 28%;
+        border: 2px solid black;
+        border-radius: 4px;
+        margin: auto;
+        margin-top: 30px;
+        box-shadow: 0 20px 35px rgba(0, 0, 1, 0.9);
+}
+
+.log-page{
+        margin-left: 130px;
+        margin-top: 10px;
+}
+
+.log-page a{
+        text-decoration: none;
+        font-weight: bold;
+        color: rgb(43, 43, 141);   
+}
+
+
+@media (max-width:600px) {
+        .insta_logo img{
+                width:70px;
+                object-fit: contain;
+        }
+        .Inputfiled input{
+                width: 40%;
+                margin: 7px;      
+        }
+
+        .Inputfiled{
+                margin-left: 30px;
+                position: relative;
+                bottom: 20px;      
+        }
+        .logInBtn{
+                margin-left: 30px;
+        }
+
+        .logInBtn button{
+                width: 70px;
+        }
+        
+        .log-page{
+                margin-left: 30px;
+        }
+
+        .log-page a{
+                font-size: 10px;
+        }
+        .container3{
+                height: 450px;
+                position: absolute;
+                overflow: none;
+        }
+        
+}
+
+@media (max-width:360px) {
+        .insta_logo img{
+                width:130px;
+                object-fit: contain;
+        }
+        .Inputfiled input{
+                width: 70%;
+                margin: 7px;      
+        }
+
+        .Inputfiled{
+                margin-left: 30px;
+                position: relative;
+                bottom: 20px;      
+        }
+        .logInBtn{
+                margin-left: 90px;
+        }
+
+        .logInBtn button{
+                width: 100px;
+        }
+        
+        .log-page{
+                margin-left: 100px;
+        }
+
+        .log-page a{
+                font-size: 12px;
+        }
+        .container3{
+                height: 500px;
+                position: absolute;
+                left: 30px;
+                top: 90px;
+                overflow: none;
+                width: 300px;
+        }
+        
+}
